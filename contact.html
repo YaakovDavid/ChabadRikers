@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Chabad of Rikers</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.page-hero { background:var(--navy); color:#fff; padding:64px 0 72px; position:relative; overflow:hidden; }
+.page-hero .watermark { position:absolute; right:2%; top:50%; transform:translateY(-50%); font-family:var(--font-brand); font-size:26vh; color:rgba(245,239,62,.05); line-height:1; }
+.page-hero .inner { position:relative; z-index:2; max-width:720px; }
+.page-hero h1 { color:#fff; margin:18px 0; }
+.page-hero .lead { color:rgba(255,255,255,.82); }
+.crumb { font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.5); }
+.crumb a { color:var(--yellow); }
+
+.contact-grid { display:grid; grid-template-columns:1.2fr .8fr; gap:56px; align-items:start; }
+@media (max-width:860px){ .contact-grid{ grid-template-columns:1fr; gap:40px; } }
+
+/* form */
+.form-card { background:#fff; border:1px solid var(--line); border-radius:18px; padding:38px 36px; box-shadow:var(--shadow-sm); }
+.form-card h2 { font-size:26px; font-family:var(--font-display); font-weight:600; text-transform:uppercase; margin-bottom:6px; }
+.form-card .sub { font-size:15px; color:var(--ink-soft); margin-bottom:26px; }
+.reason { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:22px; }
+.reason button { padding:9px 16px; border:1.5px solid var(--line); background:#fff; border-radius:999px; font-family:inherit; font-size:13.5px; font-weight:600; color:var(--ink-soft); cursor:pointer; transition:.15s; }
+.reason button.on, .reason button:hover { background:var(--card-blue); border-color:var(--blue); color:var(--blue); }
+.field { margin-bottom:18px; }
+.field label { display:block; font-size:13px; font-weight:700; margin-bottom:7px; letter-spacing:.02em; }
+.field input, .field textarea { width:100%; border:1.5px solid var(--line); border-radius:11px; padding:13px 16px; font-family:inherit; font-size:15px; outline:none; transition:border .15s; }
+.field input:focus, .field textarea:focus { border-color:var(--blue); }
+.field textarea { resize:vertical; min-height:120px; }
+.row { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+@media (max-width:480px){ .row{ grid-template-columns:1fr; } }
+.form-card .btn-donate { width:100%; padding:15px; font-size:16px; margin-top:6px; }
+
+/* info side */
+.info-block { background:var(--navy); color:#fff; border-radius:18px; padding:34px 32px; margin-bottom:24px; }
+.info-block h3 { font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:var(--yellow); margin-bottom:20px; }
+.info-row { display:flex; gap:14px; align-items:flex-start; padding:14px 0; border-bottom:1px solid rgba(255,255,255,.1); }
+.info-row:last-child { border-bottom:none; }
+.info-row svg { width:20px; height:20px; stroke:var(--yellow); flex-shrink:0; margin-top:2px; }
+.info-row b { display:block; font-size:15px; font-weight:600; }
+.info-row span { font-size:13.5px; color:rgba(255,255,255,.66); }
+
+.help-card { background:var(--paper-deep); border-radius:18px; padding:30px 30px; }
+.help-card h3 { font-size:18px; font-weight:700; margin-bottom:8px; }
+.help-card p { font-size:14px; color:var(--ink-soft); line-height:1.6; margin-bottom:16px; }
+
+/* involve cards */
+.involve { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+@media (max-width:820px){ .involve{ grid-template-columns:1fr; } }
+.inv { background:#fff; border:1px solid var(--line); border-radius:16px; padding:30px 28px; text-align:center; }
+.inv .ic { width:54px;height:54px;border-radius:14px;background:var(--card-blue);display:flex;align-items:center;justify-content:center;margin:0 auto 18px; }
+.inv .ic svg { width:26px;height:26px;stroke:var(--blue); }
+.inv h3 { font-size:19px;font-weight:700;margin-bottom:8px; }
+.inv p { font-size:14px;color:var(--ink-soft);line-height:1.6;margin-bottom:18px; }
+</style>
+</head>
+<body>
+<header class="site-header"><div class="bar">
+  <a href="index.html" class="brand"><svg class="flame" viewBox="0 0 32 32" fill="none"><path d="M16 2.5c.4 3.6-2.2 5.3-3.2 8.2-.6 1.7-.5 3.6.6 5 .9 1.2 2.4 1.6 3.4.8.9-.7 1-2 .4-3 1.6.6 2.6 2.2 2.6 4.1A6.3 6.3 0 0 1 16 28a6.3 6.3 0 0 1-6.3-6.3c0-3.9 2.7-6 4.4-8.8 1.2-2 1.9-4 1.9-6.4Z" fill="#F5EF3E"/></svg><span class="name"><b>Chabad of Rikers</b><span>Jewish Chaplaincy</span></span></a>
+  <nav class="site-nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="events.html">Events</a><a href="testimonials.html">Testimonials</a><a href="team.html">Team</a><a href="articles.html">Articles</a><a href="contact.html" class="active">Contact</a></nav>
+  <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button><div class="header-cta"><a href="contact.html" class="btn btn-outline-light btn-sm hide-mobile">Get Involved</a><a href="donate.html" class="btn btn-donate btn-sm">Donate</a></div>
+</div></header>
+
+<section class="page-hero">
+  <div class="watermark hebrew">הנני</div>
+  <div class="wrap inner">
+    <div class="crumb"><a href="index.html">Home</a> / Contact</div>
+    <h1 class="display">Reach out — we answer</h1>
+    <p class="lead">Whether you want to volunteer, request a chaplain visit for a loved one, partner with us, or just learn more — we'd love to hear from you. Real people read every message.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap contact-grid">
+    <!-- FORM -->
+    <div class="form-card">
+      <h2>Send us a message</h2>
+      <p class="sub">Tell us what you need. We typically respond within one business day.</p>
+      <div class="reason">
+        <button class="on">I want to volunteer</button>
+        <button>Request a visit</button>
+        <button>Partner with us</button>
+        <button>Press</button>
+        <button>Something else</button>
+      </div>
+      <form onsubmit="return false;">
+        <div class="row">
+          <div class="field"><label>First name</label><input type="text" placeholder="Sarah"></div>
+          <div class="field"><label>Last name</label><input type="text" placeholder="Levin"></div>
+        </div>
+        <div class="row">
+          <div class="field"><label>Email</label><input type="email" placeholder="you@email.com"></div>
+          <div class="field"><label>Phone (optional)</label><input type="tel" placeholder="(718) 555‑0123"></div>
+        </div>
+        <div class="field"><label>Your message</label><textarea placeholder="Tell us how you'd like to help, or what you need…"></textarea></div>
+        <button class="btn btn-donate" type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <!-- INFO -->
+    <div>
+      <div class="info-block">
+        <h3>Get in touch</h3>
+        <div class="info-row"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg><div><b>info@chabadofrikers.org</b><span>General inquiries &amp; volunteering</span></div></div>
+        <div class="info-row"><svg viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><div><b>(718) 555‑0147</b><span>Mon–Fri, 9am–5pm ET</span></div></div>
+        <div class="info-row"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg><div><b>Queens, New York</b><span>Mailing address on request</span></div></div>
+      </div>
+      <div class="help-card">
+        <h3>Requesting a visit?</h3>
+        <p>If you have a loved one at Rikers who'd welcome a chaplain visit, message us with their name and facility. All requests are kept confidential.</p>
+        <a href="#" class="btn btn-primary btn-sm">Request a Visit</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WAYS TO GET INVOLVED -->
+<section class="section paper-deep">
+  <div class="wrap">
+    <div class="section-head center"><span class="eyebrow center">Get Involved</span><h2 class="display">Three ways to help today</h2></div>
+    <div class="involve">
+      <div class="inv"><div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11Z"/></svg></div><h3>Donate</h3><p>Fund a visit, sponsor a holiday, or become a monthly supporter. 100% reaches the island.</p><a href="donate.html" class="btn btn-donate">Give Now</a></div>
+      <div class="inv"><div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/></svg></div><h3>Volunteer</h3><p>Pack provisions, write letters, drive routes, or help welcome people home.</p><a href="#" class="btn btn-primary">Join the Corps</a></div>
+      <div class="inv"><div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-8M16 6l-4-4-4 4M12 2v14"/></svg></div><h3>Spread the word</h3><p>Share our story with your community, shul, or workplace. Awareness opens doors.</p><a href="testimonials.html" class="btn btn-outline">See Impact</a></div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer"><div class="wrap-wide">
+  <div class="footer-grid">
+    <div><div class="brand" style="margin-bottom:4px;"><svg class="flame" viewBox="0 0 32 32" fill="none"><path d="M16 2.5c.4 3.6-2.2 5.3-3.2 8.2-.6 1.7-.5 3.6.6 5 .9 1.2 2.4 1.6 3.4.8.9-.7 1-2 .4-3 1.6.6 2.6 2.2 2.6 4.1A6.3 6.3 0 0 1 16 28a6.3 6.3 0 0 1-6.3-6.3c0-3.9 2.7-6 4.4-8.8 1.2-2 1.9-4 1.9-6.4Z" fill="#F5EF3E"/></svg><span class="name"><b>Chabad of Rikers</b><span>Jewish Chaplaincy</span></span></div><p class="footer-blurb">Bringing Jewish presence, dignity, and hope to Rikers Island — one visit, one soul, one candle at a time.</p></div>
+    <div><h4>Explore</h4><ul><li><a href="about.html">About</a></li><li><a href="events.html">Events</a></li><li><a href="articles.html">Articles</a></li><li><a href="team.html">Team</a></li></ul></div>
+    <div><h4>Get Involved</h4><ul><li><a href="donate.html">Donate</a></li><li><a href="contact.html">Volunteer</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div><h4>Contact</h4><ul><li><a href="#">info@chabadofrikers.org</a></li><li><a href="#">(718) 555‑0147</a></li><li>Queens, New York</li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Chabad of Rikers · A project of Chabad Lubavitch. 501(c)(3) nonprofit.</span><span class="hebrew">הנני · Here I Am</span></div>
+</div></footer>
+
+<script>
+document.querySelectorAll('.reason button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.reason button').forEach(x=>x.classList.remove('on')); b.classList.add('on');
+}));
+</script>
+<script src="main.js"></script>
+</body>
+</html>

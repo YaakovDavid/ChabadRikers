@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Team — Chabad of Rikers</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.page-hero { background: var(--navy); color: #fff; padding: 64px 0 72px; position: relative; overflow: hidden; }
+.page-hero .watermark { position: absolute; right: 2%; top: 50%; transform: translateY(-50%); font-family: var(--font-brand); font-size: 26vh; color: rgba(245,239,62,.05); line-height: 1; }
+.page-hero .inner { position: relative; z-index: 2; max-width: 720px; }
+.page-hero h1 { color: #fff; margin: 18px 0; }
+.page-hero .lead { color: rgba(255,255,255,.82); }
+.crumb { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.5); }
+.crumb a { color: var(--yellow); }
+
+/* Leadership */
+.lead-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; }
+@media (max-width:860px){ .lead-grid{ grid-template-columns:1fr 1fr;} }
+@media (max-width:560px){ .lead-grid{ grid-template-columns:1fr;} }
+.person { background:#fff; border:1px solid var(--line); border-radius:16px; overflow:hidden; box-shadow:var(--shadow-sm); transition:.2s; }
+.person:hover { box-shadow:var(--shadow-md); transform:translateY(-3px); }
+.person .ph { aspect-ratio: 4/5; }
+.person .body { padding: 22px 24px 26px; }
+.person .tag { margin-bottom:12px; }
+.person h3 { font-size: 22px; font-weight: 700; letter-spacing:-.02em; }
+.person .role { font-size: 14px; color: var(--blue); font-weight: 600; margin: 2px 0 12px; }
+.person p { font-size: 14.5px; color: var(--ink-soft); line-height:1.6; }
+.person .links { display:flex; gap:14px; margin-top:16px; }
+.person .links a { font-size:13px; font-weight:600; color:var(--navy); display:flex; align-items:center; gap:6px; }
+.person .links svg { width:15px; height:15px; stroke:var(--blue); }
+
+/* Featured leader */
+.spotlight-leader { display:grid; grid-template-columns: .8fr 1.2fr; gap:0; border-radius:18px; overflow:hidden; border:1px solid var(--line); background:#fff; box-shadow:var(--shadow-md); }
+.spotlight-leader .ph { min-height: 460px; }
+.spotlight-leader .body { padding: 52px 50px; display:flex; flex-direction:column; justify-content:center; }
+.spotlight-leader blockquote { font-family:var(--font-brand); font-style:italic; font-size:22px; line-height:1.5; color:var(--ink); border-left:3px solid var(--gold); padding-left:20px; margin:22px 0; }
+@media (max-width:760px){ .spotlight-leader{ grid-template-columns:1fr;} .spotlight-leader .ph{ min-height:280px;} }
+
+/* Volunteer corps */
+.corps { display:grid; grid-template-columns:repeat(6,1fr); gap:18px; }
+@media (max-width:900px){ .corps{ grid-template-columns:repeat(4,1fr);} }
+@media (max-width:560px){ .corps{ grid-template-columns:repeat(3,1fr);} }
+.mono { text-align:center; }
+.mono .circle { aspect-ratio:1; border-radius:50%; background:var(--navy); color:#fff; display:flex; align-items:center; justify-content:center;
+  font-family:var(--font-display); font-weight:600; font-size:24px; margin-bottom:10px; }
+.mono.alt .circle { background:var(--blue); }
+.mono span { font-size:13px; font-weight:600; }
+.mono small { font-size:11.5px; color:var(--ink-soft); display:block; }
+</style>
+</head>
+<body>
+<header class="site-header"><div class="bar">
+  <a href="index.html" class="brand"><svg class="flame" viewBox="0 0 32 32" fill="none"><path d="M16 2.5c.4 3.6-2.2 5.3-3.2 8.2-.6 1.7-.5 3.6.6 5 .9 1.2 2.4 1.6 3.4.8.9-.7 1-2 .4-3 1.6.6 2.6 2.2 2.6 4.1A6.3 6.3 0 0 1 16 28a6.3 6.3 0 0 1-6.3-6.3c0-3.9 2.7-6 4.4-8.8 1.2-2 1.9-4 1.9-6.4Z" fill="#F5EF3E"/></svg><span class="name"><b>Chabad of Rikers</b><span>Jewish Chaplaincy</span></span></a>
+  <nav class="site-nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="events.html">Events</a><a href="testimonials.html">Testimonials</a><a href="team.html" class="active">Team</a><a href="articles.html">Articles</a><a href="contact.html">Contact</a></nav>
+  <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button><div class="header-cta"><a href="contact.html" class="btn btn-outline-light btn-sm hide-mobile">Get Involved</a><a href="donate.html" class="btn btn-donate btn-sm">Donate</a></div>
+</div></header>
+
+<section class="page-hero">
+  <div class="watermark hebrew">צוות</div>
+  <div class="wrap inner">
+    <div class="crumb"><a href="index.html">Home</a> / Team</div>
+    <h1 class="display">The people who show up</h1>
+    <p class="lead">Behind every visit is a team that treats showing up as sacred work — chaplains, coordinators, and a corps of volunteers who give their time so that no one inside is ever truly alone.</p>
+  </div>
+</section>
+
+<!-- LEADERSHIP -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">Leadership</span><h2 class="display" style="margin-top:12px;">Our chaplaincy team</h2></div>
+    <div class="lead-grid">
+      <div class="person"><div class="ph warm" data-label="Headshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></div><div class="body"><span class="tag tag-blue">Lead Chaplain</span><h3>Rabbi Mendel S.</h3><div class="role">Director &amp; Senior Chaplain</div><p>Founder of the chaplaincy. On the island every week for over a decade, building trust one conversation at a time.</p><div class="links"><a href="contact.html"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg> Email</a></div></div></div>
+
+      <div class="person"><div class="ph warm" data-label="Headshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></div><div class="body"><span class="tag tag-blue">Chaplain</span><h3>Rabbi Dovid L.</h3><div class="role">Programs &amp; Holidays</div><p>Leads the holiday programming — from Chanukah candle-lightings to the Passover Seder behind the walls.</p><div class="links"><a href="contact.html"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg> Email</a></div></div></div>
+
+      <div class="person"><div class="ph warm" data-label="Headshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></div><div class="body"><span class="tag tag-blue">Family Liaison</span><h3>Chaya R.</h3><div class="role">Family &amp; Reentry Support</div><p>The bridge to families on the outside, and the steady hand that walks with people through release and beyond.</p><div class="links"><a href="contact.html"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg> Email</a></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER SPOTLIGHT -->
+<section class="section paper-deep">
+  <div class="wrap">
+    <article class="spotlight-leader">
+      <div class="ph warm" data-label="Director portrait"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></div>
+      <div class="body">
+        <span class="eyebrow">From the Director</span>
+        <h2 class="display" style="font-size:34px;margin:14px 0 0;">Rabbi Mendel S.</h2>
+        <blockquote>"People ask how I can go in there week after week. I tell them: when God called, Abraham didn't ask where or why. He said <em>Hineni</em> — Here I am. That's the whole job."</blockquote>
+        <p style="font-size:15px;color:var(--ink-soft);line-height:1.7;">For more than twelve years, Rabbi Mendel has walked the corridors of Rikers Island carrying nothing but presence and a refusal to let anyone be forgotten. What began as a single weekly visit has grown into a full chaplaincy — and the promise that the door is never closed.</p>
+        <a href="contact.html" class="btn btn-primary" style="margin-top:24px;align-self:flex-start;">Reach the Director</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- VOLUNTEER CORPS -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head center"><span class="eyebrow center">The Backbone</span><h2 class="display">Our volunteer corps</h2><p>More than 40 volunteers pack provisions, drive routes, write letters, and welcome people home. A few of them:</p></div>
+    <div class="corps">
+      <div class="mono"><div class="circle">SL</div><span>Sarah L.</span><small>Letters</small></div>
+      <div class="mono alt"><div class="circle">EB</div><span>Elliot B.</span><small>Logistics</small></div>
+      <div class="mono"><div class="circle">JM</div><span>Joel M.</span><small>Reentry</small></div>
+      <div class="mono alt"><div class="circle">RK</div><span>Rivka K.</span><small>Provisions</small></div>
+      <div class="mono"><div class="circle">AD</div><span>Aaron D.</span><small>Driving</small></div>
+      <div class="mono alt"><div class="circle">TF</div><span>Tova F.</span><small>Families</small></div>
+      <div class="mono alt"><div class="circle">MS</div><span>Moshe S.</span><small>Holidays</small></div>
+      <div class="mono"><div class="circle">YL</div><span>Yael L.</span><small>Letters</small></div>
+      <div class="mono alt"><div class="circle">BN</div><span>Ben N.</span><small>Logistics</small></div>
+      <div class="mono"><div class="circle">CH</div><span>Chana H.</span><small>Provisions</small></div>
+      <div class="mono alt"><div class="circle">DZ</div><span>Dov Z.</span><small>Reentry</small></div>
+      <div class="mono"><div class="circle">+30</div><span>And more</span><small>Join them</small></div>
+    </div>
+    <div class="center" style="margin-top:40px;"><a href="contact.html" class="btn btn-primary btn-lg">Become a Volunteer</a></div>
+  </div>
+</section>
+
+<section class="section donate-band" style="background:linear-gradient(160deg,var(--navy),#002a5e);color:#fff;text-align:center;">
+  <div class="wrap" style="max-width:680px;">
+    <span class="eyebrow on-dark center">Sustain the Team</span>
+    <h2 class="display" style="color:#fff;margin:16px 0;">A team this committed deserves your support</h2>
+    <p style="color:rgba(255,255,255,.82);font-size:19px;margin-bottom:30px;">Your gift covers travel, provisions, and the programs that make this work possible.</p>
+    <a href="donate.html" class="btn btn-donate btn-lg">Support the Team</a>
+  </div>
+</section>
+
+<footer class="site-footer"><div class="wrap-wide">
+  <div class="footer-grid">
+    <div><div class="brand" style="margin-bottom:4px;"><svg class="flame" viewBox="0 0 32 32" fill="none"><path d="M16 2.5c.4 3.6-2.2 5.3-3.2 8.2-.6 1.7-.5 3.6.6 5 .9 1.2 2.4 1.6 3.4.8.9-.7 1-2 .4-3 1.6.6 2.6 2.2 2.6 4.1A6.3 6.3 0 0 1 16 28a6.3 6.3 0 0 1-6.3-6.3c0-3.9 2.7-6 4.4-8.8 1.2-2 1.9-4 1.9-6.4Z" fill="#F5EF3E"/></svg><span class="name"><b>Chabad of Rikers</b><span>Jewish Chaplaincy</span></span></div><p class="footer-blurb">Bringing Jewish presence, dignity, and hope to Rikers Island — one visit, one soul, one candle at a time.</p></div>
+    <div><h4>Explore</h4><ul><li><a href="about.html">About</a></li><li><a href="events.html">Events</a></li><li><a href="articles.html">Articles</a></li><li><a href="team.html">Team</a></li></ul></div>
+    <div><h4>Get Involved</h4><ul><li><a href="donate.html">Donate</a></li><li><a href="contact.html">Volunteer</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div><h4>Contact</h4><ul><li><a href="#">info@chabadofrikers.org</a></li><li><a href="#">(718) 555‑0147</a></li><li>Queens, New York</li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Chabad of Rikers · A project of Chabad Lubavitch. 501(c)(3) nonprofit.</span><span class="hebrew">הנני · Here I Am</span></div>
+</div></footer>
+<script src="main.js"></script>
+</body>
+</html>

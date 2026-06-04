@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Articles — Chabad of Rikers</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.page-hero { background: var(--navy); color: #fff; padding: 64px 0 72px; position: relative; overflow: hidden; }
+.page-hero .watermark { position: absolute; right: 2%; top: 50%; transform: translateY(-50%); font-family: var(--font-brand); font-size: 26vh; color: rgba(245,239,62,.05); line-height: 1; }
+.page-hero .inner { position: relative; z-index: 2; max-width: 720px; }
+.page-hero h1 { color: #fff; margin: 18px 0; }
+.page-hero .lead { color: rgba(255,255,255,.82); }
+.crumb { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.5); }
+.crumb a { color: var(--yellow); }
+
+.filters { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:40px; }
+.chip { padding:9px 18px; border-radius:999px; border:1.5px solid var(--line); background:#fff; font-size:14px; font-weight:600; color:var(--ink-soft); cursor:pointer; transition:.15s; }
+.chip.on, .chip:hover { background:var(--navy); border-color:var(--navy); color:#fff; }
+
+/* Featured article */
+.feat { display:grid; grid-template-columns:1.1fr .9fr; border-radius:18px; overflow:hidden; border:1px solid var(--line); background:#fff; box-shadow:var(--shadow-md); margin-bottom:56px; }
+.feat .ph { min-height:420px; }
+.feat .body { padding:48px 46px; display:flex; flex-direction:column; justify-content:center; }
+.feat h2 { font-family:var(--font-display); font-weight:600; text-transform:uppercase; font-size:clamp(28px,3.4vw,42px); line-height:1; margin:16px 0 16px; }
+.feat p { font-size:16px; color:var(--ink-soft); line-height:1.7; }
+.feat .meta { display:flex; align-items:center; gap:14px; margin-top:22px; font-size:13.5px; color:var(--ink-soft); }
+.feat .meta .dot { width:4px; height:4px; border-radius:50%; background:var(--ink-soft); }
+@media (max-width:760px){ .feat{ grid-template-columns:1fr;} .feat .ph{ min-height:240px;} }
+
+/* Article grid */
+.a-card .ph { aspect-ratio:16/9; }
+.a-card .body { padding:22px 24px 26px; }
+.a-card h3 { font-size:20px; font-weight:700; letter-spacing:-.02em; margin:12px 0 8px; line-height:1.2; }
+.a-card p { font-size:14px; color:var(--ink-soft); line-height:1.6; }
+.a-card .meta { display:flex; align-items:center; gap:10px; margin-top:16px; font-size:12.5px; color:var(--ink-soft); }
+.a-card .meta .dot { width:3px; height:3px; border-radius:50%; background:var(--ink-soft); }
+
+/* Newsletter */
+.signup { background:var(--blue); color:#fff; border-radius:18px; padding:54px 48px; text-align:center; }
+.signup h2 { color:#fff; }
+.signup p { color:rgba(255,255,255,.82); font-size:18px; margin:14px auto 28px; max-width:480px; }
+.signup form { display:flex; gap:12px; max-width:480px; margin:0 auto; }
+.signup input { flex:1; border:none; border-radius:999px; padding:14px 22px; font-family:inherit; font-size:15px; }
+@media (max-width:520px){ .signup form{ flex-direction:column; } }
+</style>
+</head>
+<body>
+<header class="site-header"><div class="bar">
+  <a href="index.html" class="brand"><svg class="flame" viewBox="0 0 32 32" fill="none"><path d="M16 2.5c.4 3.6-2.2 5.3-3.2 8.2-.6 1.7-.5 3.6.6 5 .9 1.2 2.4 1.6 3.4.8.9-.7 1-2 .4-3 1.6.6 2.6 2.2 2.6 4.1A6.3 6.3 0 0 1 16 28a6.3 6.3 0 0 1-6.3-6.3c0-3.9 2.7-6 4.4-8.8 1.2-2 1.9-4 1.9-6.4Z" fill="#F5EF3E"/></svg><span class="name"><b>Chabad of Rikers</b><span>Jewish Chaplaincy</span></span></a>
+  <nav class="site-nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="events.html">Events</a><a href="testimonials.html">Testimonials</a><a href="team.html">Team</a><a href="articles.html" class="active">Articles</a><a href="contact.html">Contact</a></nav>
+  <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button><div class="header-cta"><a href="contact.html" class="btn btn-outline-light btn-sm hide-mobile">Get Involved</a><a href="donate.html" class="btn btn-donate btn-sm">Donate</a></div>
+</div></header>
+
+<section class="page-hero">
+  <div class="watermark hebrew">דברים</div>
+  <div class="wrap inner">
+    <div class="crumb"><a href="index.html">Home</a> / Articles</div>
+    <h1 class="display">Reflections from the field</h1>
+    <p class="lead">Stories from inside the walls, teachings for the season, and news from the chaplaincy. A window into what presence on Rikers Island actually looks like.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="filters">
+      <button class="chip on">All</button>
+      <button class="chip">Reflections</button>
+      <button class="chip">Field Notes</button>
+      <button class="chip">Teachings</button>
+      <button class="chip">News</button>
+    </div>
+
+    <!-- FEATURED -->
+    <article class="feat">
+      <div class="ph warm" data-label="Article photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 19.5V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v13.5M4 19.5A2.5 2.5 0 0 0 6.5 22H20"/></svg></div>
+      <div class="body">
+        <span class="tag tag-gold" style="align-self:flex-start;">Reflection · Featured</span>
+        <h2>What "Hineni" Means at 6 AM</h2>
+        <p>The alarm goes off before the city wakes. There is no applause for the early drive to the island, no audience for the small kindnesses inside. On showing up anyway — and why the word <em>Hineni</em> only counts when it costs something.</p>
+        <div class="meta"><span>Rabbi Mendel S.</span><span class="dot"></span><span>8 min read</span><span class="dot"></span><span>March 2026</span></div>
+        <a href="article.html" class="btn btn-primary" style="margin-top:24px;align-self:flex-start;">Read the essay →</a>
+      </div>
+    </article>
+
+    <!-- GRID -->
+    <div class="grid g3">
+      <article class="card a-card"><a href="article.html"><div class="ph" data-label="Article photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 19.5V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v13.5M4 19.5A2.5 2.5 0 0 0 6.5 22H20"/></svg></div><div class="body"><span class="tag tag-blue">Field Note</span><h3>A Menorah on the Inside</h3><p>How Chanukah came to Rikers this year — eight nights, and the faces that lit up with each candle.</p><div class="meta"><span>Rabbi Dovid L.</span><span class="dot"></span><span>5 min</span></div></div></a></article>
+
+      <article class="card a-card"><a href="article.html"><div class="ph" data-label="Article photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 19.5V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v13.5M4 19.5A2.5 2.5 0 0 0 6.5 22H20"/></svg></div><div class="body"><span class="tag tag-gold">Teaching</span><h3>Freedom Is a Practice, Not a Place</h3><p>A Passover meditation written from behind the walls — on the kinds of liberation that don't require a key.</p><div class="meta"><span>Rabbi Mendel S.</span><span class="dot"></span><span>6 min</span></div></div></a></article>
+
+      <article class="card a-card"><a href="article.html"><div class="ph" data-label="Article photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 19.5V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v13.5M4 19.5A2.5 2.5 0 0 0 6.5 22H20"/></svg></div><div class="body"><span class="tag tag-orange">News</span><h3>Our Reentry Program Turns Five</h3><p>Five years of walking with people past the gate. The numbers, the lessons, and the road ahead.</p><div class="meta"><span>Chaya R.</span><span class="dot"></span><span>4 min</span></div></div></a></article>
+
+      <article class="card a-card"><a href="article.html"><div class="ph" data-label="Article photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 19.5V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v13.5M4 19.5A2.5 2.5 0 0 0 6.5 22H20"/></svg></div><div class="body"><span class="tag tag-gold">Reflection</span><h3>The Man Who Taught Me to Listen</h3><p>Sometimes the chaplain is the one who learns. A conversation that changed how I do this work.</p><div class="meta"><span>Rabbi Mendel S.</span><span class="dot"></span><span>7 min</span></div></div></a></article>
+
+      <article class="card a-card"><a href="article.html"><div class="ph" data-label="Article photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 19.5V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v13.5M4 19.5A2.5 2.5 0 0 0 6.5 22H20"/></svg></div><div class="body"><span class="tag tag-blue">Field Note</span><h3>What We Carry In</h3><p>An honest inventory of a chaplain's bag — and why the most important thing in it weighs nothing at all.</p><div class="meta"><span>Rabbi Dovid L.</span><span class="dot"></span><span>5 min</span></div></div></a></article>
+
+      <article class="card a-card"><a href="article.html"><div class="ph" data-label="Article photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 19.5V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v13.5M4 19.5A2.5 2.5 0 0 0 6.5 22H20"/></svg></div><div class="body"><span class="tag tag-orange">News</span><h3>Annual Report 2025</h3><p>A year of presence by the numbers — visits, programs, and the people who made it possible.</p><div class="meta"><span>The Team</span><span class="dot"></span><span>3 min</span></div></div></a></article>
+    </div>
+
+    <div class="center" style="margin-top:48px;"><a href="#" class="btn btn-outline btn-lg">Load more articles</a></div>
+  </div>
+</section>
+
+<section class="section paper-deep tight">
+  <div class="wrap">
+    <div class="signup">
+      <span class="eyebrow on-dark center">Stay Close</span>
+      <h2 class="display" style="margin-top:14px;">Get reflections in your inbox</h2>
+      <p>A short note from the island every month — a story, a teaching, and a look at what your support makes possible.</p>
+      <form onsubmit="return false;">
+        <input type="email" placeholder="Your email address" aria-label="Email">
+        <button class="btn btn-donate" type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer"><div class="wrap-wide">
+  <div class="footer-grid">
+    <div><div class="brand" style="margin-bottom:4px;"><svg class="flame" viewBox="0 0 32 32" fill="none"><path d="M16 2.5c.4 3.6-2.2 5.3-3.2 8.2-.6 1.7-.5 3.6.6 5 .9 1.2 2.4 1.6 3.4.8.9-.7 1-2 .4-3 1.6.6 2.6 2.2 2.6 4.1A6.3 6.3 0 0 1 16 28a6.3 6.3 0 0 1-6.3-6.3c0-3.9 2.7-6 4.4-8.8 1.2-2 1.9-4 1.9-6.4Z" fill="#F5EF3E"/></svg><span class="name"><b>Chabad of Rikers</b><span>Jewish Chaplaincy</span></span></div><p class="footer-blurb">Bringing Jewish presence, dignity, and hope to Rikers Island — one visit, one soul, one candle at a time.</p></div>
+    <div><h4>Explore</h4><ul><li><a href="about.html">About</a></li><li><a href="events.html">Events</a></li><li><a href="articles.html">Articles</a></li><li><a href="team.html">Team</a></li></ul></div>
+    <div><h4>Get Involved</h4><ul><li><a href="donate.html">Donate</a></li><li><a href="contact.html">Volunteer</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div><h4>Contact</h4><ul><li><a href="#">info@chabadofrikers.org</a></li><li><a href="#">(718) 555‑0147</a></li><li>Queens, New York</li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Chabad of Rikers · A project of Chabad Lubavitch. 501(c)(3) nonprofit.</span><span class="hebrew">הנני · Here I Am</span></div>
+</div></footer>
+<script src="main.js"></script>
+</body>
+</html>

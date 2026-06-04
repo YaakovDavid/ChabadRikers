@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Events — Chabad of Rikers</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.page-hero { background: var(--navy); color: #fff; padding: 64px 0 72px; position: relative; overflow: hidden; }
+.page-hero .watermark { position: absolute; right: 2%; top: 50%; transform: translateY(-50%);
+  font-family: var(--font-brand); font-size: 26vh; color: rgba(245,239,62,.05); line-height: 1; pointer-events: none; }
+.page-hero .inner { position: relative; z-index: 2; max-width: 720px; }
+.page-hero h1 { color: #fff; margin: 18px 0 18px; }
+.page-hero .lead { color: rgba(255,255,255,.82); }
+.crumb { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.5); }
+.crumb a { color: var(--yellow); }
+
+.filters { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 40px; }
+.chip { padding: 9px 18px; border-radius: 999px; border: 1.5px solid var(--line); background: #fff;
+  font-size: 14px; font-weight: 600; color: var(--ink-soft); cursor: pointer; transition: all .15s; }
+.chip.on, .chip:hover { background: var(--navy); border-color: var(--navy); color: #fff; }
+
+/* Featured */
+.feature { display: grid; grid-template-columns: 1.1fr .9fr; gap: 0; border-radius: 18px; overflow: hidden;
+  border: 1px solid var(--line); background: #fff; box-shadow: var(--shadow-md); margin-bottom: 56px; }
+.feature .ph { min-height: 420px; }
+.feature .body { padding: 48px 46px; display: flex; flex-direction: column; justify-content: center; }
+.feature h2 { font-size: clamp(28px,3.2vw,40px); font-family: var(--font-display); font-weight: 600;
+  text-transform: uppercase; line-height: 1; margin: 16px 0 18px; }
+.feature .when { display: flex; gap: 22px; margin: 22px 0 26px; flex-wrap: wrap; }
+.feature .when div { display: flex; align-items: center; gap: 9px; font-size: 15px; color: var(--ink-soft); font-weight: 500; }
+.feature .when svg { width: 18px; height: 18px; stroke: var(--blue); }
+
+/* Event grid */
+.event-card .ph { aspect-ratio: 16/10; }
+.event-card .body { padding: 22px 24px 26px; }
+.event-card h3 { font-size: 22px; font-weight: 700; letter-spacing: -.02em; margin: 12px 0 8px; }
+.event-card p { font-size: 14.5px; color: var(--ink-soft); }
+.event-card .foot { display: flex; align-items: center; gap: 10px; margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line);
+  font-size: 13.5px; color: var(--ink-soft); font-weight: 600; }
+.event-card .foot svg { width: 16px; height: 16px; stroke: var(--blue); }
+.datechip { display: flex; flex-direction: column; align-items: center; justify-content: center;
+  width: 58px; height: 58px; border-radius: 12px; background: var(--navy); color: #fff; flex-shrink: 0; }
+.datechip b { font-family: var(--font-display); font-size: 23px; line-height: 1; }
+.datechip span { font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--yellow); }
+
+/* Past events list */
+.past-row { display: grid; grid-template-columns: 120px 1fr auto; gap: 28px; align-items: center;
+  padding: 22px 0; border-bottom: 1px solid var(--line); }
+.past-row .date { font-family: var(--font-display); font-weight: 600; text-transform: uppercase; color: var(--ink-soft); font-size: 15px; }
+.past-row h4 { font-size: 18px; font-weight: 700; }
+.past-row p { font-size: 14px; color: var(--ink-soft); }
+@media (max-width: 720px){ .feature{ grid-template-columns: 1fr;} .feature .ph{ min-height: 240px;} .past-row{ grid-template-columns: 1fr; gap:6px;} }
+</style>
+</head>
+<body>
+<header class="site-header"><div class="bar">
+  <a href="index.html" class="brand"><svg class="flame" viewBox="0 0 32 32" fill="none"><path d="M16 2.5c.4 3.6-2.2 5.3-3.2 8.2-.6 1.7-.5 3.6.6 5 .9 1.2 2.4 1.6 3.4.8.9-.7 1-2 .4-3 1.6.6 2.6 2.2 2.6 4.1A6.3 6.3 0 0 1 16 28a6.3 6.3 0 0 1-6.3-6.3c0-3.9 2.7-6 4.4-8.8 1.2-2 1.9-4 1.9-6.4Z" fill="#F5EF3E"/></svg><span class="name"><b>Chabad of Rikers</b><span>Jewish Chaplaincy</span></span></a>
+  <nav class="site-nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="events.html" class="active">Events</a><a href="testimonials.html">Testimonials</a><a href="team.html">Team</a><a href="articles.html">Articles</a><a href="contact.html">Contact</a></nav>
+  <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button><div class="header-cta"><a href="contact.html" class="btn btn-outline-light btn-sm hide-mobile">Get Involved</a><a href="donate.html" class="btn btn-donate btn-sm">Donate</a></div>
+</div></header>
+
+<section class="page-hero">
+  <div class="watermark hebrew">מועד</div>
+  <div class="wrap inner">
+    <div class="crumb"><a href="index.html">Home</a> / Events</div>
+    <h1 class="display">Bringing the calendar inside</h1>
+    <p class="lead">From weekly study to the high holidays, our programs carry the rhythm of Jewish life through the walls of Rikers Island — for residents, families, and the community that supports them.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="filters">
+      <button class="chip on">All</button>
+      <button class="chip">Holiday Programs</button>
+      <button class="chip">Weekly Study</button>
+      <button class="chip">Community &amp; Fundraisers</button>
+      <button class="chip">Family Support</button>
+    </div>
+
+    <!-- FEATURED -->
+    <article class="feature">
+      <div class="ph warm" data-label="Featured event photo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg>
+      </div>
+      <div class="body">
+        <span class="tag tag-orange" style="align-self:flex-start;">Featured · Holiday Program</span>
+        <h2>Chanukah on the Island</h2>
+        <p style="font-size:16px;color:var(--ink-soft);">A public menorah lighting outside the gates and candle-lightings within — eight nights of latkes, music, and the simple message that even one small light pushes back a great deal of darkness.</p>
+        <div class="when">
+          <div><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Dec 14–22, 2026</div>
+          <div><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg> Rikers Island &amp; Queens</div>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;"><a href="donate.html" class="btn btn-primary">Sponsor a Night</a><a href="contact.html" class="btn btn-outline">Volunteer</a></div>
+      </div>
+    </article>
+
+    <!-- UPCOMING GRID -->
+    <div class="section-head" style="margin-bottom:30px;"><span class="eyebrow">Upcoming</span><h2 class="display" style="margin-top:12px;">On the calendar</h2></div>
+    <div class="grid g3">
+      <article class="card event-card">
+        <div class="ph" data-label="Event photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg></div>
+        <div class="body"><span class="tag tag-blue">Weekly Study</span><h3>Thursday Learning Circle</h3><p>An open hour of Torah, questions, and presence inside the facility — no background required.</p><div class="foot"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Every Thursday · Weekly</div></div>
+      </article>
+      <article class="card event-card">
+        <div class="ph" data-label="Event photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg></div>
+        <div class="body"><span class="tag tag-orange">Holiday Program</span><h3>Passover Seder 5786</h3><p>Matzah, the four questions, and freedom's story carried into the cells — a full Seder behind the walls.</p><div class="foot"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Apr 2, 2026</div></div>
+      </article>
+      <article class="card event-card">
+        <div class="ph" data-label="Event photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg></div>
+        <div class="body"><span class="tag tag-gold">Community</span><h3>Annual Benefit Dinner</h3><p>An evening with our supporters celebrating the year's work and raising the funds that keep us on the island.</p><div class="foot"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> May 19, 2026 · Manhattan</div></div>
+      </article>
+      <article class="card event-card">
+        <div class="ph" data-label="Event photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg></div>
+        <div class="body"><span class="tag tag-orange">Holiday Program</span><h3>Rosh Hashanah Shofar Visits</h3><p>The sound of the shofar reaching every Jewish resident — the call to begin again.</p><div class="foot"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Sep 12–13, 2026</div></div>
+      </article>
+      <article class="card event-card">
+        <div class="ph" data-label="Event photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg></div>
+        <div class="body"><span class="tag tag-blue">Family Support</span><h3>Family Connection Circle</h3><p>A monthly gathering for families on the outside — support, resources, and a community that understands.</p><div class="foot"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> First Sunday · Monthly</div></div>
+      </article>
+      <article class="card event-card">
+        <div class="ph" data-label="Event photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg></div>
+        <div class="body"><span class="tag tag-blue">Weekly Study</span><h3>Shabbat Provisions Round</h3><p>Kosher meals, grape juice, and a Shabbat blessing delivered before sundown, every week of the year.</p><div class="foot"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Every Friday · Weekly</div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PAST -->
+<section class="section paper-deep tight">
+  <div class="wrap">
+    <div class="section-head" style="margin-bottom:24px;"><span class="eyebrow">Looking Back</span><h2 class="display" style="margin-top:12px;">Recent programs</h2></div>
+    <div class="past-row"><div class="date">Dec 2025</div><div><h4>Chanukah on the Island</h4><p>Eight nights of candle-lightings reaching 80+ residents.</p></div><a href="articles.html" class="btn btn-outline btn-sm">Read recap →</a></div>
+    <div class="past-row"><div class="date">Sep 2025</div><div><h4>High Holiday Services</h4><p>Shofar visits and Rosh Hashanah meals across three facilities.</p></div><a href="articles.html" class="btn btn-outline btn-sm">Read recap →</a></div>
+    <div class="past-row"><div class="date">Apr 2025</div><div><h4>Passover Seder 5785</h4><p>A complete Seder, matzah, and the story of freedom behind the walls.</p></div><a href="articles.html" class="btn btn-outline btn-sm">Read recap →</a></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section donate-band" style="background:linear-gradient(160deg,var(--navy),#002a5e);color:#fff;text-align:center;">
+  <div class="wrap" style="max-width:680px;">
+    <span class="eyebrow on-dark center">Make it Possible</span>
+    <h2 class="display" style="color:#fff;margin:16px 0;">Every program is donor-funded</h2>
+    <p style="color:rgba(255,255,255,.82);font-size:19px;margin-bottom:30px;">Sponsor a holiday, underwrite a week of visits, or give what you can. It all reaches the island.</p>
+    <a href="donate.html" class="btn btn-donate btn-lg">Sponsor a Program</a>
+  </div>
+</section>
+
+<footer class="site-footer"><div class="wrap-wide">
+  <div class="footer-grid">
+    <div><div class="brand" style="margin-bottom:4px;"><svg class="flame" viewBox="0 0 32 32" fill="none"><path d="M16 2.5c.4 3.6-2.2 5.3-3.2 8.2-.6 1.7-.5 3.6.6 5 .9 1.2 2.4 1.6 3.4.8.9-.7 1-2 .4-3 1.6.6 2.6 2.2 2.6 4.1A6.3 6.3 0 0 1 16 28a6.3 6.3 0 0 1-6.3-6.3c0-3.9 2.7-6 4.4-8.8 1.2-2 1.9-4 1.9-6.4Z" fill="#F5EF3E"/></svg><span class="name"><b>Chabad of Rikers</b><span>Jewish Chaplaincy</span></span></div><p class="footer-blurb">Bringing Jewish presence, dignity, and hope to Rikers Island — one visit, one soul, one candle at a time.</p></div>
+    <div><h4>Explore</h4><ul><li><a href="about.html">About</a></li><li><a href="events.html">Events</a></li><li><a href="articles.html">Articles</a></li><li><a href="team.html">Team</a></li></ul></div>
+    <div><h4>Get Involved</h4><ul><li><a href="donate.html">Donate</a></li><li><a href="contact.html">Volunteer</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div><h4>Contact</h4><ul><li><a href="#">info@chabadofrikers.org</a></li><li><a href="#">(718) 555‑0147</a></li><li>Queens, New York</li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Chabad of Rikers · A project of Chabad Lubavitch. 501(c)(3) nonprofit.</span><span class="hebrew">הנני · Here I Am</span></div>
+</div></footer>
+<script src="main.js"></script>
+</body>
+</html>

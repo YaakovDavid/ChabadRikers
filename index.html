@@ -104,6 +104,7 @@
       <a href="index.html" class="active">Home</a>
       <a href="about.html">About</a>
       <a href="events.html">Events</a>
+      <a href="gallery.html">Gallery</a>
       <a href="testimonials.html">Testimonials</a>
       <a href="team.html">Team</a>
       <a href="articles.html">Articles</a>
@@ -278,6 +279,47 @@
     </div>
   </div>
 </section>
+
+<!-- ============ GALLERY PREVIEW ============ -->
+<section class="section">
+  <div class="wrap">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:36px;">
+      <div class="section-head" style="margin:0;">
+        <span class="eyebrow">In Photos</span>
+        <h2 class="display" style="margin:14px 0 0;">The work, captured</h2>
+        <p style="margin-top:12px;color:var(--ink-soft);font-size:17px;">Candle-lightings, Seders, and the quiet moments in between.</p>
+      </div>
+      <a href="gallery.html" class="btn btn-outline">View all photos →</a>
+    </div>
+    <div class="home-gallery-grid" id="homeGallery"></div>
+    <div class="center" style="margin-top:28px;">
+      <a href="gallery.html" class="btn btn-navy btn-lg">Open Gallery →</a>
+    </div>
+  </div>
+</section>
+<style>
+.home-gallery-grid { display:grid; grid-template-columns:repeat(4,1fr); grid-template-rows:auto; gap:10px; }
+.home-gallery-grid a { display:block; border-radius:10px; overflow:hidden; background:var(--navy); aspect-ratio:1; }
+.home-gallery-grid a:first-child { grid-column:span 2; grid-row:span 2; aspect-ratio:1; }
+.home-gallery-grid img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .35s ease; }
+.home-gallery-grid a:hover img { transform:scale(1.05); }
+@media (max-width:720px){ .home-gallery-grid{ grid-template-columns:repeat(3,1fr); } .home-gallery-grid a:first-child{grid-column:span 2;} }
+@media (max-width:480px){ .home-gallery-grid{ grid-template-columns:repeat(2,1fr); } .home-gallery-grid a:first-child{grid-column:span 2;} }
+</style>
+<script>
+(function(){
+  const PREVIEW_PHOTOS = [
+    "images/img-001.jpeg","images/img-015.jpeg","images/img-030.jpeg",
+    "images/img-045.jpeg","images/img-060.jpeg","images/img-075.jpeg",
+    "images/img-090.jpeg","images/img-105.jpeg","images/img-120.jpeg"
+  ];
+  const grid = document.getElementById('homeGallery');
+  if (!grid) return;
+  grid.innerHTML = PREVIEW_PHOTOS.map(src =>
+    `<a href="gallery.html"><img src="${src}" alt="Gallery photo" loading="lazy"></a>`
+  ).join('');
+})();
+</script>
 
 <!-- ============ DONATE BAND ============ -->
 <section class="section donate-band">

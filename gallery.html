@@ -120,7 +120,7 @@
 </div>
 
 <!-- ── VIDEOS SECTION ── -->
-<section class="section paper-deep">
+<section class="section paper-deep" id="videos">
   <div class="wrap">
     <div class="section-head center">
       <span class="eyebrow center">On Video</span>
@@ -130,65 +130,79 @@
     <div class="grid g3" id="videoGrid">
       <a class="vcard-link" href="https://photos.app.goo.gl/T3VKvpnX1XVgXWf47" target="_blank" rel="noopener">
         <div class="vthumb"><div class="vplay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-        <p class="vtitle">Video 1</p>
+        
       </a>
       <a class="vcard-link" href="https://photos.app.goo.gl/3f7yS7ctpvFE6deHA" target="_blank" rel="noopener">
         <div class="vthumb"><div class="vplay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-        <p class="vtitle">Video 2</p>
+        
       </a>
       <a class="vcard-link" href="https://photos.app.goo.gl/Kik8Q6VcaDf8wGte8" target="_blank" rel="noopener">
         <div class="vthumb"><div class="vplay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-        <p class="vtitle">Video 3</p>
+        
       </a>
       <a class="vcard-link" href="https://photos.app.goo.gl/8GeLeETXy2VR7KVdA" target="_blank" rel="noopener">
         <div class="vthumb"><div class="vplay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-        <p class="vtitle">Video 4</p>
+        
       </a>
       <a class="vcard-link" href="https://photos.app.goo.gl/zMdwR9QRMhZBUUs98" target="_blank" rel="noopener">
         <div class="vthumb"><div class="vplay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-        <p class="vtitle">Video 5</p>
+        
       </a>
       <a class="vcard-link" href="https://photos.app.goo.gl/iopK7d49Ac85s7WA8" target="_blank" rel="noopener">
         <div class="vthumb"><div class="vplay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-        <p class="vtitle">Video 6</p>
+        
       </a>
       <a class="vcard-link" href="https://photos.app.goo.gl/gQdgZ3hXBFxQ59dm7" target="_blank" rel="noopener">
         <div class="vthumb"><div class="vplay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-        <p class="vtitle">Video 7</p>
+        
       </a>
       <a class="vcard-link" href="https://photos.app.goo.gl/UpmQTkJMmtqpgM8d7" target="_blank" rel="noopener">
         <div class="vthumb"><div class="vplay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-        <p class="vtitle">Video 8</p>
+        
       </a>
       <a class="vcard-link" href="https://photos.app.goo.gl/R8orUtT5QzC8ZK8p7" target="_blank" rel="noopener">
         <div class="vthumb"><div class="vplay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-        <p class="vtitle">Video 9</p>
+        
       </a>
       <a class="vcard-link" href="https://photos.app.goo.gl/ZDK1k7ZSeeJ6qjfw6" target="_blank" rel="noopener">
         <div class="vthumb"><div class="vplay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-        <p class="vtitle">Video 10</p>
+        
       </a>
       <a class="vcard-link" href="https://photos.app.goo.gl/Z8GKowBcqVWPkcKQ8" target="_blank" rel="noopener">
         <div class="vthumb"><div class="vplay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-        <p class="vtitle">Video 11</p>
+        
       </a>
       <a class="vcard-link" href="https://photos.app.goo.gl/uUH9uhbGPZZ1nNYb6" target="_blank" rel="noopener">
         <div class="vthumb"><div class="vplay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-        <p class="vtitle">Video 12</p>
+        
       </a>
     </div>
-    <p style="text-align:center;margin-top:20px;font-size:14px;color:var(--ink-soft);">Videos open in Google Photos. You can rename each video title above once you know what each one shows.</p>
   </div>
 </section>
 
 <style>
-.vcard-link { display:block; text-decoration:none; color:var(--ink); }
-.vthumb { aspect-ratio:16/9; background:linear-gradient(160deg,var(--navy),var(--navy-soft)); border-radius:12px; overflow:hidden; position:relative; display:flex; align-items:center; justify-content:center; transition:transform .2s; }
-.vcard-link:hover .vthumb { transform:scale(1.02); }
-.vplay { width:60px; height:60px; border-radius:50%; background:rgba(255,255,255,.92); display:flex; align-items:center; justify-content:center; transition:background .15s; }
-.vcard-link:hover .vplay { background:#fff; }
-.vplay svg { width:24px; height:24px; fill:var(--navy); margin-left:4px; }
-.vtitle { font-size:14px; font-weight:600; margin-top:10px; color:var(--ink); }
+/* ── Video cards ── */
+.vcard-link { display:block; text-decoration:none; }
+.vthumb {
+  aspect-ratio:16/9;
+  background:linear-gradient(160deg, var(--navy), var(--navy-soft));
+  border-radius:14px; overflow:hidden; position:relative;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:var(--shadow-md); transition:transform .22s ease, box-shadow .22s ease;
+}
+.vcard-link:hover .vthumb { transform:translateY(-4px); box-shadow:var(--shadow-lg); }
+.vplay {
+  width:64px; height:64px; border-radius:50%;
+  background:rgba(255,255,255,.92); backdrop-filter:blur(4px);
+  display:flex; align-items:center; justify-content:center;
+  transition:transform .18s, background .15s;
+}
+.vcard-link:hover .vplay { background:#fff; transform:scale(1.1); }
+.vplay svg { width:26px; height:26px; fill:var(--navy); margin-left:4px; }
+/* NOTE: when you have YouTube embed IDs, swap each .vthumb for:
+   <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen style="width:100%;aspect-ratio:16/9;border-radius:14px;"></iframe>
+   Or for local files:
+   <video src="videos/clip-01.mp4" controls style="width:100%;border-radius:14px;"></video> */
 </style>
 
 <section class="section donate-band" style="background:linear-gradient(160deg,var(--navy),#002a5e);color:#fff;text-align:center;">

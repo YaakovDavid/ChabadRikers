@@ -333,18 +333,12 @@
       <a href="gallery.html#videos" class="btn btn-outline">View all videos →</a>
     </div>
     <div class="grid g3">
-      <a class="vcard-link" href="https://photos.app.goo.gl/T3VKvpnX1XVgXWf47" target="_blank" rel="noopener">
-        <div class="vthumb"><div class="vplay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-      </a>
-      <a class="vcard-link" href="https://photos.app.goo.gl/3f7yS7ctpvFE6deHA" target="_blank" rel="noopener">
-        <div class="vthumb"><div class="vplay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-      </a>
-      <a class="vcard-link" href="https://photos.app.goo.gl/Kik8Q6VcaDf8wGte8" target="_blank" rel="noopener">
-        <div class="vthumb"><div class="vplay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-      </a>
+      <video src="videos/video-01.mp4" controls preload="none" class="vid"></video>
+      <video src="videos/video-05.mp4" controls preload="none" class="vid"></video>
+      <video src="videos/video-06.mp4" controls preload="none" class="vid"></video>
     </div>
     <div class="center" style="margin-top:28px;">
-      <a href="gallery.html#videos" class="btn btn-navy btn-lg">See all 12 videos →</a>
+      <a href="gallery.html#videos" class="btn btn-navy btn-lg">See all 22 videos →</a>
     </div>
   </div>
 </section>
@@ -353,8 +347,7 @@
 .vthumb { aspect-ratio:16/9; background:linear-gradient(160deg,var(--navy),var(--navy-soft)); border-radius:14px; overflow:hidden; position:relative; display:flex; align-items:center; justify-content:center; box-shadow:var(--shadow-md); transition:transform .22s ease, box-shadow .22s ease; }
 .vcard-link:hover .vthumb { transform:translateY(-4px); box-shadow:var(--shadow-lg); }
 .vplay { width:64px; height:64px; border-radius:50%; background:rgba(255,255,255,.92); backdrop-filter:blur(4px); display:flex; align-items:center; justify-content:center; transition:transform .18s, background .15s; }
-.vcard-link:hover .vplay { background:#fff; transform:scale(1.1); }
-.vplay svg { width:26px; height:26px; fill:var(--navy); margin-left:4px; }
+.vid { width:100%; border-radius:14px; display:block; box-shadow:var(--shadow-md); background:#000; }
 </style>
 
 <!-- ============ DONATE BAND ============ -->

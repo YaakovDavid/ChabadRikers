@@ -127,7 +127,7 @@
       <h2 class="display">Watch the work</h2>
       <p>Recorded moments from programs, celebrations, and life on the island.</p>
     </div>
-    <div class="grid g3">
+    <div class="vid-masonry">
       <video poster="videos/thumbs/thumb-01.jpg" src="videos/video-01.mp4" controls preload="none" class="vid"></video>
       <video poster="videos/thumbs/thumb-02.jpg" src="videos/video-02.mp4" controls preload="none" class="vid"></video>
       <video poster="videos/thumbs/thumb-03.jpg" src="videos/video-03.mp4" controls preload="none" class="vid"></video>
@@ -153,7 +153,14 @@
     </div>
   </div>
 </section>
-<style>.vid { width:100%; border-radius:14px; display:block; box-shadow:var(--shadow-md); background:#000; }</style>
+<style>
+.vid { width:100%; border-radius:14px; display:block; box-shadow:var(--shadow-md); background:#000; }
+/* Masonry video grid — no gaps between items of different heights */
+.vid-masonry { columns:3; column-gap:20px; }
+@media (max-width:900px){ .vid-masonry{ columns:2; } }
+@media (max-width:500px){ .vid-masonry{ columns:1; } }
+.vid-masonry .vid { break-inside:avoid; margin-bottom:20px; aspect-ratio:auto; }
+</style>
 
 <style>
 /* ── Video cards ── */
